@@ -1,0 +1,11 @@
+image=imread('image/2.jpg');
+image_rotate=imrotate(image,90);
+[row,column,channel]=size(image);
+image_resize=imresize(image,[row,2*column]);
+image_adjust=imadjust(image,[0 0 0.8;1 1 1]);
+imwrite(image_rotate,'image/2_rotate.jpg');
+imwrite(image_resize,'image/2_resize.jpg');
+imwrite(image_adjust,'image/2_adjust.jpg');
+ex_4_2('image/2_rotate.jpg',0.6,3);
+ex_4_2('image/2_resize.jpg',0.6,2.5);
+ex_4_2('image/2_adjust.jpg',0.7,2.5);
